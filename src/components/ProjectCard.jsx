@@ -2,8 +2,7 @@ export default function ProjectCard({ project, onDelete }) {
 
   return (
     // Individual project card
-    <div className="bg-white p-4 rounded-xl shadow hover:shadow-lg transition border border-gray-100">
-
+<div className="bg-white p-4 rounded-xl shadow hover:shadow-lg transition border-l-4 border-cyan-500">
       {/* Project title */}
       <h2 className="text-lg font-semibold text-gray-800">
         {project.title}

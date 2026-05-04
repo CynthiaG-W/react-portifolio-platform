@@ -6,12 +6,11 @@ import ProjectList from "./components/ProjectList";
 
 function App() {
 
-  // State: stores all project objects
   const [projects, setProjects] = useState([
     {
-       id: 1,
-       title: "Habit Tracker",
-       description: "Track daily habits with a simple checklist",
+      id: 1,
+      title: "Habit Tracker",
+      description: "Track daily habits with a simple checklist",
     },
     {
       id: 2,
@@ -19,26 +18,22 @@ function App() {
       description: "Set study/workout sessions with a countdown timer",
     },
     {
-       id: 3,
-       title: "Chat Application",
-       description: "Real-time messaging app using WebSockets",
+      id: 3,
+      title: "Chat Application",
+      description: "Real-time messaging app using WebSockets",
     },
   ]);
 
-  // State: stores search input value
   const [search, setSearch] = useState("");
 
-  // Add a new project to state
   function addProject(project) {
     setProjects([...projects, project]);
   }
 
-  // Delete project using its ID
   function deleteProject(id) {
     setProjects(projects.filter((p) => p.id !== id));
   }
 
-  // Filter projects based on search input
   const filteredProjects = projects.filter((p) =>
     p.title.toLowerCase().includes(search.toLowerCase())
   );
@@ -46,13 +41,12 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-100">
 
-      {/* Navigation bar */}
       <Navbar />
 
-      <div className="max-w-6xl mx-auto p-6 space-y-6">
+      <div className="max-w-6xl mx-auto p-6 space-y-10">
 
-        {/* Page header section */}
-        <div>
+        {/* Header */}
+        <div className="space-y-1">
           <h1 className="text-3xl font-bold text-blue-700">
             Personal Project Showcase App
           </h1>
@@ -62,13 +56,13 @@ function App() {
           </p>
         </div>
 
-        {/* Form component for adding projects */}
+        {/* Form */}
         <ProjectForm onAdd={addProject} />
 
-        {/* Search input component */}
+        {/* Search */}
         <SearchBar search={search} setSearch={setSearch} />
 
-        {/* Project list display */}
+        {/* List */}
         <ProjectList
           projects={filteredProjects}
           onDelete={deleteProject}
