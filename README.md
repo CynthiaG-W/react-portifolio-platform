@@ -1,16 +1,80 @@
-# React + Vite
+# SPA Projects Sowcase App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This is a simple SPA Portifolio built with React,Tailwind and Vite. It allows one to showcase their projects, add new ones dynamically, and search through existing work easily.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The objective of the project is to keep things clean, responsive, and easy to extend as the portfolio grows.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Displays a list of projects on the landing page  
+- Allows users to add new projects through a form  
+- Real-time search to filter projects  
+- Responsive layout for different screens such as desktops and tablets
+- Allows users to delete projects they nolonger require 
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Tech Stack
+
+- React  
+- Vite  
+- JavaScript  
+- Tailwind CSS  
+
+---
+
+## Getting Started
+
+### Installation
+
+```bash
+git clone <repository-url>
+cd react-portifolio-platform
+npm install
+
+## Running the Project
+
+Start the development server:
+
+```bash
+npm run dev
+
+### Open the application
+
+After starting the server, open your browser and visit:
+
+http://localhost:5173
+
+## Project Structure
+
+src/
+components/
+Navbar.jsx
+ProjectForm.jsx
+SearchBar.jsx
+ProjectList.jsx
+Projectcard.jsx
+App.jsx
+main.jsx
+
+---
+
+## Components
+
+- **Navbar** – Navigation bar for the app  
+- **ProjectForm** – Used to add new projects  
+- **SearchBar** – Filters projects dynamically  
+- **ProjectList** – Displays all projects
+- **ProjectCard** – Displays individual project details in a structured card layout
+
+---
+
+## Future Improvements
+ 
+- Add image upload for each project  
+- Add categories or tags for filtering  
+- Improve UI  
